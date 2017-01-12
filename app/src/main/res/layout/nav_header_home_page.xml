@@ -17,14 +17,14 @@
         android:id="@+id/imageView"
         android:layout_width="97dp"
         android:layout_height="80dp"
-        android:layout_weight="0.93"
+        android:layout_weight="0.20"
         android:background="@android:color/transparent"
         android:paddingLeft="0px"
         android:paddingTop="0px"
         app:srcCompat="@mipmap/bitmap" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="338dp"
         android:layout_height="wrap_content"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="Auth-er"
@@ -32,8 +32,9 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="279dp"
         android:layout_height="wrap_content"
+        android:layout_weight="0.12"
         android:text="Easy IIT Kanpur internet authentication" />
 
 </LinearLayout>
