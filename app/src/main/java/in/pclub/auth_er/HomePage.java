@@ -16,7 +16,7 @@ public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private void buttonPress(View view) {
-        new Connection(view).execute();
+        new AsyncCon(view).execute();
     }
 
     @Override
