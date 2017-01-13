@@ -60,8 +60,8 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignTop="@id/text_pass"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
         android:weightSum="100">
 
@@ -78,18 +78,19 @@
             android:layout_weight="80">
 
             <TextView
-                android:text="TextView"
+                android:id="@+id/terminal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/terminal"
-                android:scrollbars="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="#fdf6e3"
+                android:fontFamily="monospace"
                 android:maxLines="15"
                 android:minLines="15"
-                android:background="#fdf6e3"
-                android:textColor="#002b36"
                 android:padding="10dp"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentTop="true" />
+                android:scrollbars="vertical"
+                android:text="TextView"
+                android:textColor="#002b36" />
         </RelativeLayout>
     </LinearLayout>
 
