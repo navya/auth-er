@@ -55,4 +55,42 @@
         android:layout_below="@+id/text_user"
         android:layout_marginTop="14dp"
         android:text="Password" />
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/text_pass"
+        android:layout_marginTop="80dp"
+        android:weightSum="100">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="10">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="80">
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/terminal"
+                android:scrollbars="vertical"
+                android:maxLines="15"
+                android:minLines="15"
+                android:background="#fdf6e3"
+                android:textColor="#002b36"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
 </RelativeLayout>
