@@ -13,4 +13,46 @@
     tools:context="in.pclub.auth_er.HomePage"
     tools:showIn="@layout/app_bar_home_page">
 
+    <EditText
+        android:id="@+id/text_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/text_user"
+        android:layout_alignStart="@+id/text_user"
+        android:layout_below="@+id/text_user"
+        android:layout_marginTop="34dp"
+        android:contentDescription="CC Password"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/text_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="122dp"
+        android:contentDescription="Username (IITK ID)"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_pass"
+        android:layout_alignLeft="@+id/text_user"
+        android:layout_alignStart="@+id/text_user"
+        android:layout_marginBottom="50dp"
+        android:text="Username" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/text_pass"
+        android:layout_alignStart="@+id/text_pass"
+        android:layout_below="@+id/text_user"
+        android:layout_marginTop="14dp"
+        android:text="Password" />
 </RelativeLayout>

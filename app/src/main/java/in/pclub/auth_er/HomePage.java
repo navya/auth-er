@@ -3,7 +3,6 @@ package in.pclub.auth_er;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -13,11 +12,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import java.net.HttpURLConnection;
-import java.net.URL;
-
 public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private void buttonPress(View view) {
+        new Connection(view).execute();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,27 +27,10 @@ public class HomePage extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        HttpURLConnection urlConnection = null;
-        String str = null;
-        int code = 0;
-        try {
-            URL url = new URL("http://www.example.com/");
-            urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setRequestMethod("GET");
-            urlConnection.connect();
-
-            code = urlConnection.getResponseCode();
-        } catch (Exception e) {
-            str = e.toString();
-        } finally {
-            urlConnection.disconnect();
-        }
-        final String abc = "" + code;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, abc, Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                buttonPress(view);
             }
         });
 
