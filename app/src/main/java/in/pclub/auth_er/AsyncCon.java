@@ -14,8 +14,8 @@ public class AsyncCon extends AsyncTask<Void, Void, Integer> {
     private View v;
     private Context c;
 
-    public AsyncCon(Context c, View context) {
-        this.v = context;
+    public AsyncCon(Context c, View v) {
+        this.v = v;
         this.c = c;
     }
 

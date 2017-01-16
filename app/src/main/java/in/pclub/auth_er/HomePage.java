@@ -41,7 +41,7 @@ public class HomePage extends AppCompatActivity
                 }
         };
 
-// Install the all-trusting trust manager
+        // Install the all-trusting trust manager
         try {
             SSLContext sc = SSLContext.getInstance("SSL");
             sc.init(null, trustAllCerts, new java.security.SecureRandom());

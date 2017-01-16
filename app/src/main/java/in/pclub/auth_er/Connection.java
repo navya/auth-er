@@ -15,8 +15,8 @@ import javax.net.ssl.HttpsURLConnection;
 public class Connection {
 
     private static String locationHeader = null;
-    private static String username = null;
-    private static String password = null;
+    public static String username = null;
+    public static String password = null;
 
     protected static int attempt(String _username, String _password) {
         username = _username;
@@ -58,7 +58,7 @@ public class Connection {
 
     private static void handleIronport() throws Exception {
         assert (Connection.locationHeader.contains("ironport"));
-        Log.w("Pallav", "Logging in to IRONPORT!!");
+        Log.w("Debug", "Logging in to IRONPORT");
         HttpsURLConnection connection = (HttpsURLConnection) new URL(Connection.locationHeader).openConnection();
         String credentials = username + ":" + password;
         String credBase64 = Base64.encodeToString(credentials.getBytes(), Base64.NO_WRAP);
@@ -66,16 +66,17 @@ public class Connection {
         try {
             connection.connect();
         } catch (Exception e) {
-            Log.w("Pallav", e.toString());
+            Log.w("Exception", e.toString());
         } finally {
-            Log.w("Pallav: ", connection.getResponseMessage());
-            Log.w("Pallav: ", connection.getResponseCode() + "");
+            Log.d("Debug: ", connection.getResponseMessage());
+            Log.d("Debug: ", connection.getResponseCode() + "");
             connection.disconnect();
         }
     }
 
     private static void handleFortinet() {
         assert (Connection.locationHeader.contains("gateway.iitk.ac.in"));
+        Log.w("Debug", "Logging in to Fortinet");
     }
 
     private static State getState(HttpURLConnection urlConnection) {
@@ -83,6 +84,7 @@ public class Connection {
         String location;
         try {
             code = urlConnection.getResponseCode();
+            Log.w("Danger", code + "");
             if (code < 300 || code >= 400) {
                 return State.LOGGEDIN;
             }
